@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Revive Restore Resell — Shop Our Stores</title>
+<meta name="description" content="Curated secondhand fashion, restored and rehomed. Shop Revive Restore Resell on eBay, Poshmark, Depop, and Facebook Marketplace." />
+
+<!-- ============================================================
+     REVIVE RESTORE RESELL — Store Directory Landing Page
+     Boho minimalist · single self-contained file
+     To update a store link, edit the href="" values in the
+     STORE LINKS section below (search for: EDIT LINK).
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream:     #F5EFE3;
+    --sand:      #EAE0CE;
+    --espresso:  #3B342B;
+    --mocha:     #6E6253;
+    --terracotta:#BE7B57;
+    --sage:      #8E9A7C;
+    --card:      #FBF7EF;
+    --line:      #DCCFB8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--espresso);
+    background:
+      radial-gradient(circle at 20% 0%, #FBF6EC 0%, rgba(251,246,236,0) 55%),
+      radial-gradient(circle at 85% 100%, #EFE6D4 0%, rgba(239,230,212,0) 50%),
+      var(--cream);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 22px 36px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+    animation: rise 0.8s ease both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- Monogram ---- */
+  .monogram {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 22px;
+    border: 1.5px solid var(--terracotta);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--terracotta);
+    position: relative;
+  }
+  .monogram::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
+
+  /* ---- Wordmark ---- */
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.18;
+    letter-spacing: 0.5px;
+  }
+  h1 .amp { color: var(--terracotta); font-style: italic; }
+
+  .tagline {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mocha);
+  }
+
+  .divider {
+    width: 46px;
+    height: 1px;
+    background: var(--terracotta);
+    margin: 24px auto 30px;
+    position: relative;
+  }
+  .divider::before,
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    transform: translateY(-50%);
+  }
+  .divider::before { left: -12px; }
+  .divider::after  { right: -12px; }
+
+  .intro {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--mocha);
+    margin-bottom: 30px;
+    padding: 0 6px;
+  }
+
+  /* ---- Store buttons ---- */
+  .stores { display: flex; flex-direction: column; gap: 14px; }
+
+  .store {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--espresso);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 20px;
+    text-align: left;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .store:hover {
+    transform: translateY(-2px);
+    border-color: var(--terracotta);
+    box-shadow: 0 10px 24px -14px rgba(59,52,43,0.45);
+  }
+
+  .store .icon {
+    flex: 0 0 auto;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--terracotta);
+  }
+
+  .store .label { flex: 1 1 auto; }
+  .store .name {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .store .sub {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mocha);
+    margin-top: 3px;
+  }
+
+  .store .arrow {
+    flex: 0 0 auto;
+    color: var(--sage);
+    transition: transform 0.18s ease, color 0.18s ease;
+  }
+  .store:hover .arrow { transform: translateX(3px); color: var(--terracotta); }
+
+  /* ---- Footer ---- */
+  footer {
+    margin-top: 34px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--mocha);
+    line-height: 1.7;
+  }
+  footer .verse {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--terracotta);
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="monogram">RRR</div>
+
+    <h1>Revive <span class="amp">·</span> Restore <span class="amp">·</span> Resell</h1>
+    <p class="tagline">Curated Secondhand</p>
+
+    <div class="divider"></div>
+
+    <p class="intro">
+      Loved pieces, given a second life. Shop our closet across every platform —
+      tap a store below to browse what's listed now.
+    </p>
+
+    <!-- ============ STORE LINKS — EDIT LINK (replace each href) ============ -->
+    <nav class="stores">
+      <a class="store" href="https://www.ebay.com/str/reviverestoreresell" target="_blank" rel="noopener">
+        <span class="icon">e</span>
+        <span class="label">
+          <span class="name">eBay</span>
+          <span class="sub">Shop the store</span>
+        </span>
+        <span class="arrow">&#8594;</span>
+      </a>
+
+      <a class="store" href="https://poshmark.com/closet/revived77" target="_blank" rel="noopener">
+        <span class="icon">P</span>
+        <span class="label">
+          <span class="name">Poshmark</span>
+          <span class="sub">Shop the closet</span>
+        </span>
+        <span class="arrow">&#8594;</span>
+      </a>
+
+      <a class="store" href="https://www.depop.com/revived77/" target="_blank" rel="noopener">
+        <span class="icon">D</span>
+        <span class="label">
+          <span class="name">Depop</span>
+          <span class="sub">Shop the shop</span>
+        </span>
+        <span class="arrow">&#8594;</span>
+      </a>
+
+      <a class="store" href="https://www.facebook.com/marketplace/profile/545595549/" target="_blank" rel="noopener">
+        <span class="icon">f</span>
+        <span class="label">
+          <span class="name">Facebook Marketplace</span>
+          <span class="sub">Shop local &amp; ship</span>
+        </span>
+        <span class="arrow">&#8594;</span>
+      </a>
+    </nav>
+    <!-- ============ END STORE LINKS ============ -->
+
+    <footer>
+      &copy; <span id="yr"></span> Revive Restore Resell
+    </footer>
+  </main>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
