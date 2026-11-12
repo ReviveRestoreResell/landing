@@ -25,10 +25,10 @@
 
 <script>
 const marketplaceInfo={
-ebay:{title:'Returning to eBay',url:'https://www.ebay.com/str/reviverestoreresell',instructions:'<ol><li>Choose an item from our eBay store.</li><li>Message us on eBay before buying. Mention that you are a returning customer and ask for your <strong>15% offer</strong>.</li><li>Wait for us to confirm and arrange the discount within eBay. Review the price before purchasing.</li></ol><p>No checkout code is needed for this request.</p>'},
-poshmark:{title:'Returning to Poshmark',url:'https://poshmark.com/closet/revived77',instructions:'<p>Add your item to a Bundle and comment ‘returning customer.’ We’ll send your 15% offer before you buy.</p>'},
-mercari:{title:'Returning to Mercari',url:'https://www.mercari.com/u/revived77/',instructions:'<ol><li>Choose an item from our <strong>revived77</strong> shop.</li><li>Message us through the listing in the Mercari app before buying. Mention that you are a returning customer and ask for your <strong>15% offer</strong>.</li><li>Wait for confirmation and the offer or price adjustment in Mercari. Review the price before buying.</li></ol>'},
-depop:{title:'Returning to Depop',url:'https://www.depop.com/revived77/',instructions:'<ol><li>Choose an item from our <strong>revived77</strong> shop.</li><li>Message us in the Depop app before buying. Mention that you are a returning customer and ask for your <strong>15% offer</strong>.</li><li>Wait for confirmation and your offer in Depop. Review it before accepting.</li></ol>'}
+ebay:{title:'Returning to eBay',url:'https://www.ebay.com/str/reviverestoreresell',instructions:'<p>Message us on eBay with “REVIVE15” before buying. We’ll arrange your 15% offer within eBay for you to review before purchasing.</p>'},
+poshmark:{title:'Returning to Poshmark',url:'https://poshmark.com/closet/revived77',instructions:'<p>Add your item to a Bundle and comment ‘REVIVE15.’ We’ll send your 15% offer before you buy.</p>'},
+mercari:{title:'Returning to Mercari',url:'https://www.mercari.com/u/revived77/',instructions:'<p>Message us on the item with “REVIVE15.” We’ll confirm your price, then you can send an offer for that amount.</p>'},
+depop:{title:'Returning to Depop',url:'https://www.depop.com/revived77/',instructions:'<p>Like the item and message us “REVIVE15.” We’ll send you an offer to use at checkout.</p>'}
 };
 const dialog=document.querySelector('#market-dialog');let opener=null;
 for(const button of document.querySelectorAll('[data-market]'))button.addEventListener('click',()=>{const item=marketplaceInfo[button.dataset.market];if(typeof dialog.showModal!=='function'){window.location.href=item.url;return}if(dialog.open)return;opener=button;document.querySelector('#dialog-title').textContent=item.title;document.querySelector('#dialog-instructions').innerHTML=item.instructions;document.querySelector('#dialog-shop').href=item.url;dialog.showModal();});
