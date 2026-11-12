@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://reviverestoreresell.com/" />
 <title>Revive Restore Resell — Shop Our Stores</title>
-<meta name="description" content="Curated resale for real life. Shop Revive Restore Resell on eBay and Poshmark — top-rated, 100% positive, 4,500+ items sold." />
+<meta name="description" content="Curated resale for real life. Shop Revive Restore Resell on eBay, Poshmark, Mercari, and Depop — top-rated, 100% positive, 4,500+ items sold." />
 
 <!-- ============================================================
      REVIVE RESTORE RESELL — Store Directory landing page
      Logo lettering + brand language + trust strip
-     Stores: eBay + Poshmark (add Depop / FBMP here later)
+     Stores: eBay + Poshmark + Mercari + Depop
      ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,16 +82,33 @@
   .store:hover .arrow{transform:translateX(3px); color:var(--terracotta);}
 
   footer{margin-top:30px; font-size:12px; font-weight:300; letter-spacing:1px; color:var(--mocha);}
+
+/* Approved botanical frame and horizontal wordmark. Original shop content retained. */
+html{scroll-behavior:smooth}body{display:block;height:auto;padding:0;background:#e7e6db}
+.site{max-width:1500px;margin:auto;background:#fbf7ec;min-height:100svh}
+.header{padding:31px 6% 28px;border-bottom:1px solid #b5ad8d;display:flex;align-items:center;justify-content:space-between;gap:25px;color:#18362f}
+.header h1{font:normal 20px/1.4 Georgia,serif;letter-spacing:.17em;margin:0}
+.wordmark{color:inherit;text-decoration:none}
+.wordmark small{display:block;font:10px/1.5 Arial,sans-serif;letter-spacing:.24em;margin-top:7px}
+.header nav{font:12px/1.5 Arial,sans-serif;white-space:nowrap}.header nav a{color:inherit;text-decoration:none;padding:10px 0}
+.header nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.content-frame{min-height:calc(100svh - 125px);position:relative;isolation:isolate;overflow:hidden;display:flex;justify-content:center;align-items:center;padding:50px 22px 40px}
+.content-frame:before{content:"";position:absolute;inset:24px 3.1% 25px;border:1px solid #b5ad8d;pointer-events:none;z-index:-1}
+.leaf{position:absolute;inset:0 auto 0 0;width:20%;height:100%;min-height:950px;z-index:-1;opacity:.9;mask-image:linear-gradient(to right,#000 72%,transparent)}
+.leaf svg{width:100%;height:100%;display:block}
+.wrap{position:relative;z-index:1;animation:none}#stores{scroll-margin-top:24px}.return-link{display:block;margin-top:14px;font:11px/1.5 'Jost',sans-serif;color:var(--mocha);text-underline-offset:4px}
+a:focus-visible{outline:3px solid #7b4e26;outline-offset:5px}
+@media(max-width:650px){.header{padding:27px 28px 22px;flex-wrap:wrap;gap:17px}.header h1{font-size:16px;letter-spacing:.14em}.wordmark small{font-size:8px;letter-spacing:.2em}.header nav{font-size:11px}.content-frame{padding:37px 36px 33px}.content-frame:before{inset:14px}.leaf{width:12%;opacity:.6;min-height:900px}.store .name,.store .sub{display:block}.store .sub{font-size:11px;letter-spacing:1px}}
+@media(min-width:1100px){.leaf{width:22%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
+<div class="site">
+<header class="header"><h1><a class="wordmark" href="/">REVIVE RESTORE RESELL<small>TIMELESS STYLE · NEW POSSIBILITIES</small></a></h1><nav aria-label="Main navigation"><a href="#stores">Shop our stores</a></nav></header>
+<div class="content-frame">
+<div class="leaf" aria-hidden="true"><svg viewBox="0 0 245 1120" preserveAspectRatio="none" focusable="false"><image href="homepage-botanical.png" width="1254" height="1254"/></svg></div>
   <main class="wrap">
-    <div class="mono">
-      <div class="rev">REVIVE</div>
-      <div class="mline"></div>
-      <div class="scr">Restore&nbsp;Resell</div>
-    </div>
-
     <p class="tag">Curated resale for real life</p>
 
     <div class="divider"></div>
@@ -103,7 +121,7 @@
       <div class="tcol"><div class="tn">Top&#8209;Rated</div><div class="tl">eBay &amp; Posh</div></div>
     </div>
 
-    <nav class="stores">
+    <nav class="stores" id="stores" aria-label="Shop our marketplaces">
       <a class="store" href="https://www.ebay.com/str/reviverestoreresell" target="_blank" rel="noopener">
         <span class="icon">e</span>
         <span class="label">
@@ -121,11 +139,25 @@
         </span>
         <span class="arrow">&#8594;</span>
       </a>
+
+      <a class="store" href="https://www.mercari.com/u/revived77/" target="_blank" rel="noopener">
+        <span class="icon">M</span>
+        <span class="label"><span class="name">Mercari</span> <span class="sub">Shop the store</span></span>
+        <span class="arrow">&#8594;</span>
+      </a>
+      <a class="store" href="https://www.depop.com/revived77/" target="_blank" rel="noopener">
+        <span class="icon">D</span>
+        <span class="label"><span class="name">Depop</span> <span class="sub">Shop the store</span></span>
+        <span class="arrow">&#8594;</span>
+      </a>
     </nav>
 
-    <footer>&copy; <span id="yr"></span> Revive Restore Resell</footer>
+    <footer>&copy; <span id="yr"></span> Revive Restore Resell<a class="return-link" href="/returncustomer/">Returning customer?</a></footer>
   </main>
 
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</div>
+</div>
 </body>
 </html>
+
